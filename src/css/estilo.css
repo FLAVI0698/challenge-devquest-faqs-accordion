@@ -1,0 +1,81 @@
+main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.acordeon {
+    background-color: #FCFCFC;;
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 655px;
+    min-height: 347px;
+    border-radius: 30px;
+    box-shadow: 10px 20px 20px -10px rgba(0, 0, 0, 0.3);
+
+    .img-faq{
+        position: absolute;
+        left: -90px;
+    }
+
+    .conteudo {
+        flex: 1;
+        margin-left: 228px;
+        /* border: 1px solid red; */
+
+        .title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+
+        .items .item {
+            cursor: pointer;
+            width: 90%;
+            margin: 10px 0;
+            background-image: url(../assets/img/seta-desligada.png);
+            background-size: 12px;
+            background-position: top 8px right 0;
+            background-repeat: no-repeat;
+            
+            .pergunta:hover {
+                
+                color: #e84f68;
+                text-decoration: underline;
+                font-weight: 600;
+            }
+
+            .pergunta {
+                width: 90%;
+                margin-bottom: 15px;
+                font-weight: 500;
+                font-size: 1.7rem;
+            }
+
+
+            .resposta {
+                margin-bottom: 15px;
+                display: none;
+                font-size: 1.5rem;
+                font-weight: 300;
+            }
+        }
+
+        .items .item:not(:last-child) {
+            border-bottom: 1px solid #D4D4D4;
+        }
+
+        .items .item.ativa {
+            background-image: url(../assets/img/seta-ativa.png);
+            .pergunta {
+                font-weight: 600;
+            }
+
+            .resposta {
+                display: block;
+            }
+        }
+    }
+}
